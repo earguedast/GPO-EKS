@@ -1,15 +1,15 @@
 # Terraform ----------------------------------------------------------------------------------------
 terraform {
-  required_version = ">= 1.1.5"
+  required_version = ">= 1.1.6"
 
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = ">= 3.74"
+      version = ">= 4.3"
     }
 
     kubernetes = {
-      version = "~> 2.7"
+      version = "~> 2.8"
     }
 
     local = {

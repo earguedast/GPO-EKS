@@ -8,19 +8,19 @@ variable "aws_region" {
 variable "aws_vpc_cidr_block" {
   description = "The CIDR block for the VPC."
   type    = string
-  default = "172.20.0.0/22"
+  default = "172.24.0.0/22"
 }
 
 variable "aws_vpc_public_subnets" {
   description = "A list of public subnets inside the VPC."
   type    = list(string)
-  default = ["172.20.0.0/24", "172.20.1.0/24", "172.20.2.0/24"]
+  default = ["172.24.0.0/24", "172.24.1.0/24", "172.24.2.0/24"]
 }
 
 variable "aws_vpc_private_subnets" {
   description = "A list of private subnets inside the VPC."
   type    = list(string)
-  default = ["172.20.3.0/24"]
+  default = ["172.24.3.0/24"]
 }
 
 variable "aws_ssh_ingress_cidr_blocks" {
@@ -140,11 +140,11 @@ variable "aws_eks_instance_type" {
   default     = ["m5a.xlarge"]
 }
 
-# valid aws eks versions are: 1.17, 1.18, 1.19, 1.20, and 1.21.
+# valid aws eks versions are: 1.18, 1.19, 1.20, and 1.21.
 variable "aws_eks_kubernetes_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
-  default     = "1.20"
+  default     = "1.21"
 }
 
 variable "lab_ssh_pub_key_name" {
@@ -159,8 +159,8 @@ variable "resource_name_prefix" {
   default     = "FSO-Lab"
 }
 
-variable "resource_environment_tag" {
-  description = "Resource environment tag."
+variable "resource_environment_home_tag" {
+  description = "Resource environment home tag."
   type        = string
   default     = "Cisco One Lab"
 }
@@ -171,16 +171,28 @@ variable "resource_owner_tag" {
   default     = "Cisco APO Cross-Architectural and AppDynamics Cloud Channel Sales Teams"
 }
 
+variable "resource_event_tag" {
+  description = "Resource event tag."
+  type        = string
+  default     = "FSO Lab Demo"
+}
+
 variable "resource_project_tag" {
   description = "Resource project tag."
   type        = string
   default     = "FSO Lab DevOps"
 }
 
-variable "resource_event_tag" {
-  description = "Resource event tag."
+variable "resource_owner_email_tag" {
+  description = "Resource owner email tag."
   type        = string
-  default     = "FSO Lab Demo"
+  default     = "ksinghi@cisco.com"
+}
+
+variable "resource_cost_center_tag" {
+  description = "Resource cost center tag."
+  type        = string
+  default     = "198432918"
 }
 
 variable "map_roles" {

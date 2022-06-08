@@ -86,7 +86,7 @@ data "aws_caller_identity" "current" {
 data "aws_availability_zones" "available" {
 }
 
-data "aws_ami" "FSO-LPAD-AL2-AMI"{
+data "aws_ami" "fso_lab_ami"{
   most_recent = true
   owners      = ["self"]
 
@@ -187,7 +187,7 @@ module "vm" {
   version = ">= 3.5"
 
   name                 = local.vm_name
-  ami                  = data.aws_ami.FSO-LPAD-AL2-AMI.id
+  ami                  = data.aws_ami.fso_lab_ami.id
   instance_type        = var.aws_ec2_instance_type
   iam_instance_profile = aws_iam_instance_profile.ec2_instance_profile.id
   key_name             = var.aws_ec2_ssh_pub_key_name

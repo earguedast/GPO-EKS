@@ -86,7 +86,7 @@ variable "aws_ec2_ssh_pub_key_name" {
 variable "aws_ec2_source_ami_filter" {
   description = "AWS EC2 source AMI disk image filter."
   type        = string
-  default     = "FSO-LPAD-AL2-AMI-*"
+  default     = "FSO-LPAD-AL2-AMI"
 }
 
 variable "aws_ec2_instance_type" {
@@ -162,7 +162,7 @@ variable "resource_name_prefix" {
 variable "resource_environment_home_tag" {
   description = "Resource environment home tag."
   type        = string
-  default     = "Cisco One Lab"
+  default     = "dCloud FSO Lab"
 }
 
 variable "resource_owner_tag" {

@@ -86,7 +86,7 @@ data "aws_caller_identity" "current" {
 data "aws_availability_zones" "available" {
 }
 
-data "aws_ami" "fso_lab_ami" {
+data "aws_ami" "FSO-LPAD-AL2-AMI" {
   most_recent = true
   owners      = ["self"]
 

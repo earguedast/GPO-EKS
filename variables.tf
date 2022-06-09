@@ -86,14 +86,14 @@ variable "aws_ec2_ssh_pub_key_name" {
 variable "aws_ec2_source_ami_filter" {
   description = "AWS EC2 source AMI disk image filter."
   type        = string
-  default     = "FSO-LPAD-AL2-AMI"
+  default     = "FSO-LPAD-AL2-AMI-"
 }
 
 variable "aws_ec2_instance_type" {
   description = "AWS EC2 instance type."
   type        = string
-# default     = "t2.micro"
-  default     = "t2.large"
+  default     = "t2.micro"
+  #default     = "t2.large"
 }
 
 variable "lab_number" {

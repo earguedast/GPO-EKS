@@ -101,7 +101,7 @@ data "aws_ec2_transit_gateway" "tgw" {
     #name   = "owner-id"
     name = "id"
     #values = var.cisco_tgw_owner_id
-    values = "tgw-0210d84fe9cb93118"
+    values = ["tgw-0210d84fe9cb93118"]
     
   }
 }

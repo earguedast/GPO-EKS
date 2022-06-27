@@ -97,13 +97,12 @@ data "aws_ami" "fso_lab_ami"{
 }
 
 data "aws_ec2_transit_gateway" "tgw" {
-  filter {
+  id = "tgw-0210d84fe9cb93118"
+  #filter {
     #name   = "owner-id"
-    name = "id"
     #values = var.cisco_tgw_owner_id
-    values = ["tgw-0210d84fe9cb93118"]
-    
-  }
+
+  #}
 }
 
 data "aws_eks_cluster" "cluster" {

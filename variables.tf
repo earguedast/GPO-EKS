@@ -60,7 +60,7 @@ variable "cisco_tgw_route_cidr_block" {
   type        = string
   #default     = "10.0.0.0/8"
   default = "198.18.128.0/18"
-  blackhole = false
+  
 }
 
 variable "aws_ec2_vm_hostname_prefix" {

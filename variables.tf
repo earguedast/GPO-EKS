@@ -38,8 +38,8 @@ variable "cisco_ssh_ingress_cidr_blocks" {
 variable "aws_cloud9_ssh_ingress_cidr_blocks" {
   description = "The ingress CIDR blocks for inbound ssh traffic from AWS Cloud9 System Manager."
   type        = string
-  #default     = "13.52.232.224/27,18.144.158.0/27"
-  default =  "0.0.0.0/0"
+  default     = "13.52.232.224/27,18.144.158.0/27"
+  #default =  "0.0.0.0/0"
 }
 
 variable "cisco_tgw_owner_id" {

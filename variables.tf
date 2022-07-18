@@ -141,6 +141,7 @@ variable "aws_eks_instance_type" {
   description = "AWS EKS Node Group instance type."
   type        = list(string)
   default     = ["m5a.large"]
+  
   #default     = ["m5a.xlarge"]
 }
 

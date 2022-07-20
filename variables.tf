@@ -59,7 +59,7 @@ variable "cisco_tgw_route_cidr_block" {
   description = "CIDR block to route traffic to the Cisco data center via the Transit Gateway."
   type        = string
   #default     = "10.0.0.0/8"
-  default = "198.18.128.0/18"
+  default = "198.19.216.0/21"
   
 }
 

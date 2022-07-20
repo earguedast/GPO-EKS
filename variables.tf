@@ -2,7 +2,7 @@
 variable "aws_region" {
   description = "AWS region."
   type        = string
-  default     = "us-west-1"
+  default     = "us-west-2"
 }
 
 variable "aws_vpc_cidr_block" {

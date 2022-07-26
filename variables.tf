@@ -45,7 +45,7 @@ variable "aws_cloud9_ssh_ingress_cidr_blocks" {
 variable "cisco_tgw_owner_id" {
   description = "Cisco  AWS account ID that owns the EC2 Transit Gateway."
   type    = list(string)
-  default = ["267916310455"]
+  default = ["608996301026"]
  
 }
 

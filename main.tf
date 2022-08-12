@@ -86,7 +86,7 @@ data "aws_caller_identity" "current" {
 data "aws_availability_zones" "available" {
 }
 
-data "aws_ami" "fso_lab_ami"{
+data "aws_ami" "fso_lab_ami" {
   most_recent = true
   owners      = ["self"]
 
@@ -97,11 +97,9 @@ data "aws_ami" "fso_lab_ami"{
 }
 
 data "aws_ec2_transit_gateway" "tgw" {
-  #id = "tgw-0210d84fe9cb93118"
   filter {
     name   = "owner-id"
     values = var.cisco_tgw_owner_id
-
   }
 }
 

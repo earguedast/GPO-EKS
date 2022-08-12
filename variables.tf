@@ -52,7 +52,7 @@ variable "cisco_tgw_owner_id" {
 variable "cisco_tcp_ingress_cidr_blocks" {
   description = "The ingress CIDR blocks for inbound TCP traffic from the Cisco data center."
   type        = string
-  default     = "0.0.0.0/0"
+  default     = "198.19.216.0/21"
 }
 
 variable "cisco_tgw_route_cidr_block" {
@@ -141,7 +141,6 @@ variable "aws_eks_instance_type" {
   description = "AWS EKS Node Group instance type."
   type        = list(string)
   default     = ["m5a.large"]
-  
   #default     = ["m5a.xlarge"]
 }
 

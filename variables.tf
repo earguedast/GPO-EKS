@@ -39,14 +39,12 @@ variable "aws_cloud9_ssh_ingress_cidr_blocks" {
   description = "The ingress CIDR blocks for inbound ssh traffic from AWS Cloud9 System Manager."
   type        = string
   default     = "13.52.232.224/27,18.144.158.0/27"
-  #default =  "0.0.0.0/0"
 }
 
 variable "cisco_tgw_owner_id" {
-  description = "Cisco  AWS account ID that owns the EC2 Transit Gateway."
+  description = "Cisco SRE AWS account ID that owns the EC2 Transit Gateway."
   type    = list(string)
   default = ["608996301026"]
- 
 }
 
 variable "cisco_tcp_ingress_cidr_blocks" {
@@ -58,9 +56,7 @@ variable "cisco_tcp_ingress_cidr_blocks" {
 variable "cisco_tgw_route_cidr_block" {
   description = "CIDR block to route traffic to the Cisco data center via the Transit Gateway."
   type        = string
-  #default     = "10.0.0.0/8"
-  default = "198.19.216.0/21"
-  
+  default     = "198.19.216.0/21"
 }
 
 variable "aws_ec2_vm_hostname_prefix" {
@@ -96,8 +92,8 @@ variable "aws_ec2_source_ami_filter" {
 variable "aws_ec2_instance_type" {
   description = "AWS EC2 instance type."
   type        = string
-  #default     = "t2.micro"
-  default     = "t2.large"
+ default     = "t2.micro"
+  #default     = "t2.large"
 }
 
 variable "lab_number" {
@@ -166,7 +162,7 @@ variable "resource_name_prefix" {
 variable "resource_environment_home_tag" {
   description = "Resource environment home tag."
   type        = string
-  default     = "dCloud FSO Lab"
+  default     = "Cisco dCloud FSO"
 }
 
 variable "resource_owner_tag" {

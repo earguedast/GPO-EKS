@@ -96,8 +96,8 @@ variable "aws_ec2_source_ami_filter" {
 variable "aws_ec2_instance_type" {
   description = "AWS EC2 instance type."
   type        = string
-  default     = "t2.micro"
-  #default     = "t2.large"
+  #default     = "t2.micro"
+  default     = "t2.large"
 }
 
 variable "lab_number" {

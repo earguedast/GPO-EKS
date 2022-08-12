@@ -191,6 +191,9 @@ module "vm" {
   instance_type        = var.aws_ec2_instance_type
   iam_instance_profile = aws_iam_instance_profile.ec2_instance_profile.id
   key_name             = var.aws_ec2_ssh_pub_key_name
+  capacity_reservation_specification = {
+    capacity_reservation_preference = "open"
+  }
 
   tags = local.resource_tags
 

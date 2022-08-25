@@ -271,7 +271,7 @@ resource "random_string" "suffix" {
 resource "aws_ec2_transit_gateway_vpc_attachment" "tgw_attachment" {
   transit_gateway_id = data.aws_ec2_transit_gateway.tgw.id
   vpc_id             = module.vpc.vpc_id
-  subnet_ids         = tolist([module.vpc.public_subnets[0], module.vpc.public_subnets[1]])
+  subnet_ids         = tolist([module.vpc.public_subnets[0], module.vpc.public_subnets[1],module.vpc.public_subnets[2]])
 
   tags = merge({ Name = local.tgw_attachment_name }, local.resource_tags)
 }

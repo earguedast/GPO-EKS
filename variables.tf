@@ -144,7 +144,7 @@ variable "aws_eks_instance_type" {
 variable "aws_eks_kubernetes_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
-  default     = "1.23"
+  default     = "1.21"
 }
 
 variable "lab_ssh_pub_key_name" {
